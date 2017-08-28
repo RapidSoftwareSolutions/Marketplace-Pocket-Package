@@ -25,10 +25,10 @@ Convert the request token into a Pocket access token. The Pocket access token is
 | Field      | Type       | Description
 |------------|------------|----------
 | consumerKey| credentials| The consumer key for your application.
-| code       | String     | The request token supplied in the code field of the /v3/oauth/request call.
+| code       | String     | The request token supplied in the code field of the getRequestToken endpoint.
 
 ## Pocket.createItem
-To save an item to a user’s Pocket list, you’ll make a single request to the /v3/add endpoint.
+To save an item to a user’s Pocket list, you’ll make a single request to the createItem endpoint.
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -36,7 +36,7 @@ To save an item to a user’s Pocket list, you’ll make a single request to the
 | accessToken| String     | The user's Pocket access token.
 | url        | String     | The URL of the item you want to save.
 | title      | String     | This can be included for cases where an item does not have a title, which is typical for image or PDF URLs. If Pocket detects a title from the content of the page, this parameter will be ignored.
-| tags       | List       | A comma-separated list of tags to apply to the item.
+| tags       | List       | A comma-separated array of tags to apply to the item.
 | tweetId    | String     | If you are adding Pocket support to a Twitter client, please send along a reference to the tweet status id. This allows Pocket to show the original tweet alongside the article.
 
 ## Pocket.archiveItem

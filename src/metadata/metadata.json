@@ -86,7 +86,7 @@
                 {
                     "name": "code",
                     "type": "String",
-                    "info": "The request token supplied in the code field of the \/v3\/oauth\/request call.",
+                    "info": "The request token supplied in the code field of the getRequestToken endpoint.",
                     "required": true
                 }
             ],
@@ -119,7 +119,7 @@
         },
         {
             "name": "createItem",
-            "description": "To save an item to a user\u2019s Pocket list, you\u2019ll make a single request to the \/v3\/add endpoint.",
+            "description": "To save an item to a user\u2019s Pocket list.",
             "args": [
                 {
                     "name": "consumerKey",
@@ -155,7 +155,7 @@
                         "type": "String",
                         "info": "Single tag name."
                     },
-                    "info": "A comma-separated list of tags to apply to the item.",
+                    "info": "A comma-separated array of tags to apply to the item.",
                     "required": false
                 },
                 {

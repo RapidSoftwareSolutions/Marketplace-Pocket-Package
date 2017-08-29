@@ -18,7 +18,11 @@ $app->post('/api/Pocket/postMultipleActions', function ($request, $response) {
        'query' => ['consumer_key','access_token','actions']
     ];
 
+
+
     $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
+
+    $data['actions'] = json_encode($data['actions']);
 
     $client = $this->httpClient;
     $query_str = "https://getpocket.com/v3/send";

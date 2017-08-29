@@ -1003,11 +1003,21 @@
         "method":"post",
         "params":[
           {
-            "paramsType":"query",
+            "paramsType":"json",
             "bodyParams":[
               "consumer_key",
               "access_token",
-              "actions"
+              "state",
+              "favorite",
+              "tagType",
+              "contentType",
+              "sort",
+              "detailType",
+              "search",
+              "domain",
+              "since",
+              "count",
+              "offset"
             ]
           }
         ],

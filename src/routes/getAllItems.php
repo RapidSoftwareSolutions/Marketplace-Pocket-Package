@@ -15,7 +15,21 @@ $app->post('/api/Pocket/getAllItems', function ($request, $response) {
     $requiredParams = ['consumerKey'=>'consumer_key','accessToken'=>'access_token'];
     $optionalParams = ['state'=>'state','favorite'=>'favorite','favorite'=>'favorite','tagType'=>'tag','contentType'=>'contentType','sort'=>'sort','detailType'=>'detailType','search'=>'search','domain'=>'domain','since'=>'since','count'=>'count','offset'=>'offset'];
     $bodyParams = [
-       'query' => ['consumer_key','access_token','actions']
+       'json' => [
+           'consumer_key',
+           'access_token',
+           "state",
+           "favorite",
+           "tagType",
+           "contentType",
+           "sort",
+           "detailType",
+           "search",
+           "domain",
+           "since",
+           "count",
+           "offset"
+       ]
     ];
 
     $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
@@ -36,11 +50,15 @@ $app->post('/api/Pocket/getAllItems', function ($request, $response) {
     }
 
 
+//
+//    print_r($data);
+//    exit();
+
     $client = $this->httpClient;
     $query_str = "https://getpocket.com/v3/get";
 
     $requestParams = \Models\Params::createRequestBody($data, $bodyParams);
-    $requestParams['headers'] = ["X-Accept"=>"application/json"];
+    $requestParams['headers'] = ["Content-Type"=>"application/json"];
 
     try {
         $resp = $client->post($query_str, $requestParams);

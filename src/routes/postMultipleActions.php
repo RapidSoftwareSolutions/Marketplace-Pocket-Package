@@ -21,9 +21,6 @@ $app->post('/api/Pocket/postMultipleActions', function ($request, $response) {
 
 
     $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
-
-    print_r($data);
-    exit();
     
     $data['actions'] = json_encode($data['actions']);
 

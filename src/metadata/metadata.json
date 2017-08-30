@@ -933,11 +933,7 @@
                 {
                     "name": "tagType",
                     "vendorName": "tag",
-                    "type": "Select",
-                    "options": [
-                        "tag_name",
-                        "_untagged_"
-                    ],
+                    "type":"String",
                     "info": "tag_name - only return items tagged with tag_name._untagged_ - only return untagged items",
                     "required": false
                 },

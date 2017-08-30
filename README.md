@@ -163,7 +163,7 @@ o retrieve item(s) from a user’s Pocket list, you’ll make a request to the g
 | accessToken| String     | The user's Pocket access token.
 | state      | Select     | State type for request.
 | favorite   | Select     | Select item type for request.
-| tagType    | Select     | ```tag_name``` - only return items tagged with tag_name.```_untagged_``` - only return untagged items
+| tagType    |  String    | ```tag_name``` - only return items tagged with tag_name.```_untagged_``` - only return untagged items
 | contentType| Select     | article - only return articles.video - only return videos or articles with embedded videos.image - only return images.
 | sort       | Select     | newest - return items in order of newest to oldest;oldest - return items in order of oldest to newest;title - return items in order of title alphabetically;site - return items in order of url alphabetically;
 | detailType | Select     | complete - return all data about each item, including tags, images, authors, videos, and more;simple - return basic information about each item, including title, url, status, and more;

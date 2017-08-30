@@ -20,7 +20,7 @@ $app->post('/api/Pocket/getAllItems', function ($request, $response) {
            'access_token',
            "state",
            "favorite",
-           "tagType",
+           "tag",
            "contentType",
            "sort",
            "detailType",
